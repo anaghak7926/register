@@ -2,7 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Example extends StatelessWidget {
-  const Example({super.key});
+  const Example({super.key,required  this.email, required  this.password});
+  final String email;
+  final String password;
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +12,7 @@ class Example extends StatelessWidget {
       backgroundColor: Colors.green,
       body: Center(
         child: Container(
-          color: Colors.cyanAccent,
+          color: Colors.blueGrey,
 
           padding: EdgeInsets.all(20),
           child: Column(
@@ -24,7 +26,7 @@ class Example extends StatelessWidget {
           ),
           Text('Moonga'),
               Text(
-                'Bird',
+                'moonga@gamil.com',
                 style: TextStyle(
                   fontSize: 18.0,
                   decoration: TextDecoration.underline,
@@ -38,9 +40,9 @@ class Example extends StatelessWidget {
                 child: Row(
                   children: [
                     SizedBox(width: 20,),
-                    Icon(Icons.add_call),
+                    Icon(Icons.remove_red_eye),
                     SizedBox(width: 20,),
-                    Text('+91 9686764656'),
+                    Text('User Password: $password',),
                   ],
                 )
 
@@ -56,7 +58,7 @@ class Example extends StatelessWidget {
                       SizedBox(width: 20,),
                       Icon(Icons.add_card_rounded),
                       SizedBox(width: 20,),
-                      Text('mooga@gmail.com'),
+                      Text('User Email: $email'),
                     ],
                   )
 
